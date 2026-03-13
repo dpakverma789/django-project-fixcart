@@ -1,0 +1,290 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0b0b0b;
+    color: white;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: #111;
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.logo span:first-child {
+    color: #ff3b3b;
+}
+
+.logo span:last-child {
+    color: #ffb400;
+}
+
+nav ul {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ddd;
+    font-weight: 500;
+}
+
+nav a.active {
+    color: #ffb400;
+    border-bottom: 2px solid #ffb400;
+    padding-bottom: 3px;
+}
+
+.call-btn {
+    background: #ff3b3b;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* HERO */
+
+.hero {
+    padding: 110px 20px;
+
+    background: radial-gradient(circle at 20% 40%, rgba(255, 180, 0, 0.25), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(255, 60, 60, 0.25), transparent 40%);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 56px;
+}
+
+.hero span {
+    color: #ffb400;
+}
+
+.hero p {
+    margin-top: 15px;
+    color: #aaa;
+}
+
+/* CONTACT CARDS */
+
+.contact-cards {
+    padding: 70px 8%;
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap: 30px;
+}
+
+.contact-card {
+    background: #121212;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #222;
+    text-align: center;
+}
+
+.contact-icon {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff3b3b, #ffb400);
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* CONTACT SECTION */
+
+.contact-section {
+    padding: 80px 8%;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 60px;
+}
+
+/* FORM */
+
+.contact-form h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.contact-form span {
+    color: #ffb400;
+}
+
+.contact-form p {
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #222;
+    background: #111;
+    color: white;
+}
+
+textarea {
+    height: 140px;
+}
+
+.submit-btn {
+    background: #ff3b3b;
+    border: none;
+    padding: 16px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* MAP */
+
+.map {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #222;
+}
+
+.map iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+}
+
+/* BUSINESS HOURS */
+
+.hours {
+    margin-top: 20px;
+    background: #121212;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #222;
+}
+
+.hours h3 {
+    margin-bottom: 15px;
+}
+
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.hours-row span:last-child {
+    color: #ffb400;
+}
+
+/* FOOTER */
+
+footer {
+    background: #111;
+    padding: 60px 8%;
+    margin-top: 80px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap: 40px;
+}
+
+footer h3 {
+    margin-bottom: 15px;
+    color: #ffb400;
+}
+
+footer p {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    text-align: center;
+    color: #777;
+    border-top: 1px solid #222;
+    padding-top: 20px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+
+    .contact-cards {
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+    .contact-section {
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .contact-cards {
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns:1fr;
+    }
+
+}
+
