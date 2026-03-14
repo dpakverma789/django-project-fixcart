@@ -7,9 +7,11 @@ def home(request):
 def about(request):
     return render(request, 'fixcart_app/about.html')
 
+def thankyou(request):
+    return render(request, 'fixcart_app/thankyou.html')
+
 def order(request):
     if request.method == "POST":
-
         repair_request = RepairRequest.objects.create(
             name=request.POST.get("name"),
             category=request.POST.get("category"),
@@ -27,7 +29,7 @@ def order(request):
                 image=img
             )
 
-        return redirect("contact")
+        return redirect("thankyou")
     return render(request, 'fixcart_app/order.html')
 
 def contact(request):
