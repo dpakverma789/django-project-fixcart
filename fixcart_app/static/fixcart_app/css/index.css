@@ -59,6 +59,12 @@ nav {
     color: #ffb400;
 }
 
+nav a.active {
+    color: #ffb400;
+    border-bottom: 2px solid #ffb400;
+    padding-bottom: 3px;
+}
+
 /* CALL BUTTON */
 
 .call-btn {
