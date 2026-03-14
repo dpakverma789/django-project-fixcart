@@ -72,16 +72,15 @@ nav a.active {
 /* CALL BUTTON */
 
 .call-btn {
-    background: #ff3b3b;
     padding: 10px 18px;
     border-radius: 6px;
     font-weight: 500;
     color: white;
     transition: .3s;
+    text-decoration: none;
 }
 
 .call-btn:hover {
-    background: #e12b2b;
     transform: translateY(-2px);
 }
 
@@ -406,6 +405,7 @@ footer p {
     .btn-red,
     .btn-outline {
         width: 100%;
+        margin: 5px;
     }
 
     .services,
