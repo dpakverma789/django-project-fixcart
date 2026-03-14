@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FixCart | Book Repair</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="{% static 'fixcart_app/css/order.css' %}">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+        <a href="/"><span>Fix</span><span>Cart</span></a>
+    </div>
+
+    <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a class="call-btn" href="tel:8955160103">📞 Call Now</a></li>
+    </ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Book Device <span>Repair Service</span></h1>
+
+        <p>Schedule a pickup and our technician will repair your device.</p>
+
+    </div>
+
+</section>
+
+
+<!-- BOOKING FORM -->
+
+<section class="booking-section">
+
+    <div class="booking-container">
+
+        <h2>Repair <span>Request</span></h2>
+
+        <form method="POST" enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            <div class="form-grid">
+
+                <div class="input-group">
+                    <label>Full Name *</label>
+                    <input type="text" name="name" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Contact Number *</label>
+                    <input type="text" name="contact_number" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Device Category *</label>
+                    <select name="category" required>
+                        <option value="">Select Device</option>
+                        <option value="mobile">Mobile</option>
+                        <option value="laptop">Laptop</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Paste Google Map Location</label>
+                    <input type="url" name="pickup_map_location">
+                </div>
+
+            </div>
+
+            <div class="input-group">
+                <label>Pickup Address *</label>
+                <textarea name="pickup_address" required></textarea>
+            </div>
+
+            <div class="input-group">
+                <label>Describe Problem *</label>
+                <textarea name="problem_description" required></textarea>
+            </div>
+
+            <div class="input-group">
+                <label>Upload Device Images</label>
+                <input type="file" name="device_images" multiple id="imageUpload">
+            </div>
+
+            <div class="preview" id="imagePreview"></div>
+
+            <button type="submit" class="submit-btn">
+                Book Pickup 🚚
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<script src="{% static 'fixcart_app/js/order.js' %}"></script>
+
+</body>
+</html>

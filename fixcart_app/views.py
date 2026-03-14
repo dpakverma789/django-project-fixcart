@@ -7,8 +7,7 @@ def home(request):
 def about(request):
     return render(request, 'fixcart_app/about.html')
 
-def contact(request):
-
+def order(request):
     if request.method == "POST":
 
         repair_request = RepairRequest.objects.create(
@@ -29,4 +28,7 @@ def contact(request):
             )
 
         return redirect("contact")
+    return render(request, 'fixcart_app/order.html')
+
+def contact(request):
     return render(request, "fixcart_app/contact.html")

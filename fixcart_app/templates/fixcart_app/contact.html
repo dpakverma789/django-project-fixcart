@@ -10,15 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
           rel="stylesheet">
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <link rel="stylesheet" href="{% static 'fixcart_app/css/contact.css' %}">
+    <link rel="stylesheet" href="{% static 'fixcart_app/css/index.css' %}">
 </head>
 
 <body>
-
-<!-- NAVBAR -->
 
 <nav>
 
@@ -46,148 +43,47 @@
 
     <div class="hero-content">
 
-        <h1>Book Device <span>Repair</span></h1>
+        <h1>Contact <span>FixCart</span></h1>
 
-        <p>Schedule a pickup and our technician will repair your device.</p>
+        <p>We are always ready to help with your device repairs.</p>
 
-    </div>
-
-</section>
-
-
-<!-- CONTACT INFO CARDS -->
-
-<section class="contact-cards">
-
-    <div class="contact-card">
-        <div class="contact-icon"><i class="fa fa-phone"></i></div>
-        <h3>Call Us</h3>
-        <p style="color:#ffb400;">8955160103</p>
-        <p style="color:#ffb400;">6377122637</p>
-    </div>
-
-    <div class="contact-card">
-        <div class="contact-icon"><i class="fa fa-envelope"></i></div>
-        <h3>Email</h3>
-        <p style="color:#ffb400;">contact@fixcart.com</p>
-    </div>
-
-    <div class="contact-card">
-        <div class="contact-icon"><i class="fa fa-location-dot"></i></div>
-        <h3>Service Area</h3>
-        <p>Ajmer City</p>
-        <p>Nearby Regions</p>
-    </div>
-
-    <div class="contact-card">
-        <div class="contact-icon"><i class="fa fa-clock"></i></div>
-        <h3>Working Hours</h3>
-        <p>Mon - Sat</p>
-        <p>9 AM - 8 PM</p>
-    </div>
-
-</section>
-
-
-<!-- BOOK REPAIR SECTION -->
-
-<section class="contact-section">
-
-    <!-- LEFT SIDE FORM -->
-
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-
-        <div class="input-group">
-            <label>Full Name *</label>
-            <input type="text" name="name" required>
-        </div>
-
-        <div class="input-group">
-            <label>Device Category *</label>
-            <select name="category" required>
-                <option value="">Select Device</option>
-                <option value="mobile">Mobile</option>
-                <option value="laptop">Laptop</option>
-                <option value="other">Other</option>
-            </select>
-        </div>
-
-        <div class="input-group">
-            <label>Describe Problem *</label>
-            <textarea name="problem_description" required></textarea>
-        </div>
-
-        <div class="input-group">
-            <label>Pickup Address *</label>
-            <textarea name="pickup_address" required></textarea>
-        </div>
-
-        <div class="input-group">
-            <label>Contact Number *</label>
-            <input type="text" name="contact_number" required>
-        </div>
-
-        <div class="input-group">
-            <label>Google Map Location</label>
-            <input type="url" name="pickup_map_location">
-        </div>
-
-        <div class="input-group">
-            <label>Upload Device Images</label>
-            <input type="file" name="device_images" multiple>
-        </div>
-
-        <button type="submit" class="submit-btn">
-            Book Pickup 🚚
-        </button>
-
-    </form>
-
-
-    <!-- RIGHT SIDE VIDEO -->
-
-    <div>
-
-        <h2 style="margin-bottom:10px;">How <span style="color:#ffb400;">FixCart Works</span></h2>
-
-        <p style="color:#aaa;margin-bottom:20px;">
-            Watch how our repair pickup service works.
+        <p class="hero-desc">
+            Reach out to us through phone, email, or social media.
         </p>
 
-        <div class="map">
+    </div>
 
-            <iframe
-                    width="100%"
-                    height="350"
-                    src="https://www.youtube.com/embed/tgbNymZ7vqY"
-                    title="FixCart Service"
-                    frameborder="0"
-                    allowfullscreen>
-            </iframe>
+</section>
 
+
+<!-- CONTACT INFO -->
+
+<section class="section">
+
+    <h2>Get in <span>Touch</span></h2>
+
+    <p>Have questions or need assistance? Contact us anytime.</p>
+
+    <div class="services">
+
+        <div class="card">
+            <div class="icon"><i class="fas fa-user"></i></div>
+            <h3>Founder</h3>
+            <p>Rahul Verma</p>
+            <p>Founder & Lead Technician</p>
         </div>
 
+        <div class="card">
+            <div class="icon"><i class="fas fa-phone"></i></div>
+            <h3>Phone</h3>
+            <p>+91 8955160103</p>
+            <p>+91 6377122637</p>
+        </div>
 
-        <div class="hours">
-
-            <h3>Business Hours</h3>
-
-            <div class="hours-row">
-                <span>Monday - Friday:</span>
-                <span>9:00 AM - 8:00 PM</span>
-            </div>
-
-            <div class="hours-row">
-                <span>Saturday:</span>
-                <span>10:00 AM - 6:00 PM</span>
-            </div>
-
-            <div class="hours-row">
-                <span>Sunday:</span>
-                <span style="color:#888;">Closed</span>
-            </div>
-
+        <div class="card">
+            <div class="icon"><i class="fas fa-envelope"></i></div>
+            <h3>Email</h3>
+            <p>contact@fixcart.com</p>
         </div>
 
     </div>
@@ -195,7 +91,81 @@
 </section>
 
 
-<!-- FOOTER -->
+<!-- WORKING HOURS -->
+
+<section class="section">
+
+    <h2>Working <span>Hours</span></h2>
+
+    <p>We are available throughout the week.</p>
+
+    <div class="features">
+
+        <div class="feature-card">
+            <div class="icon"><i class="fas fa-clock"></i></div>
+            <h3>Monday - Saturday</h3>
+            <p>9:00 AM – 8:00 PM</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon"><i class="fas fa-calendar-times"></i></div>
+            <h3>Sunday</h3>
+            <p>Closed</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+            <h3>Service Area</h3>
+            <p>Ajmer & Nearby Areas</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- YOUTUBE INTRO VIDEO -->
+
+<section class="section">
+
+    <h2>Meet <span>FixCart</span></h2>
+
+    <p>Watch our introduction video to learn how our service works.</p>
+
+    <div style="max-width:800px;margin:auto;margin-top:40px;border-radius:12px;overflow:hidden;border:1px solid #222;">
+
+        <iframe
+                width="100%"
+                height="400"
+                src="https://www.youtube.com/embed/tgbNymZ7vqY"
+                frameborder="0"
+                allowfullscreen>
+        </iframe>
+
+    </div>
+
+</section>
+
+
+<!-- SOCIAL MEDIA -->
+
+<section class="section">
+
+    <h2>Follow <span>Us</span></h2>
+
+    <p>Stay connected with FixCart.</p>
+
+    <div style="margin-top:40px;font-size:28px;display:flex;justify-content:center;gap:30px;">
+
+        <a href="#" style="color:white;"><i class="fab fa-instagram"></i></a>
+        <a href="#" style="color:white;"><i class="fab fa-youtube"></i></a>
+        <a href="#" style="color:white;"><i class="fab fa-facebook"></i></a>
+        <a href="#" style="color:white;"><i class="fab fa-whatsapp"></i></a>
+
+    </div>
+
+</section>
+
 
 <footer>
 
@@ -204,18 +174,18 @@
         <div>
             <h3 style="color:#ff3b3b;">FixCart</h3>
             <p>Repair Made Easy</p>
-            <p>Your trusted partner for electronics repair.</p>
+            <p>Your trusted partner for all electronics repair needs.</p>
         </div>
 
         <div>
             <h3>Quick Links</h3>
             <p><a href="/" class="footer-link">Home</a></p>
-            <p><a href="/about/" class="footer-link">About</a></p>
+            <p><a href="/about/" class="footer-link">About Us</a></p>
             <p><a href="/contact/" class="footer-link">Contact</a></p>
         </div>
 
         <div>
-            <h3>Services</h3>
+            <h3>Our Services</h3>
             <p>Laptop Repair</p>
             <p>Phone Repair</p>
             <p>Home Electronics</p>
@@ -223,10 +193,11 @@
         </div>
 
         <div>
-            <h3>Contact</h3>
+            <h3>Contact Us</h3>
             <p><i class="fa-solid fa-phone"></i> 8955160103</p>
             <p><i class="fa-solid fa-phone"></i> 6377122637</p>
             <p><i class="fa-solid fa-envelope"></i> contact@fixcart.com</p>
+            <p>Mon - Sat: 9 AM - 8 PM</p>
         </div>
 
     </div>
