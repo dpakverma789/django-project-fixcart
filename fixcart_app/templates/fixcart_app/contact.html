@@ -9,9 +9,11 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
           rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="{% static 'fixcart_app/css/contact.css' %}">
 
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="{% static 'fixcart_app/css/contact.css' %}">
 </head>
 
 <body>
@@ -37,19 +39,21 @@
 
 </nav>
 
+
 <!-- HERO -->
 
 <section class="hero">
 
     <div class="hero-content">
 
-        <h1>Get In <span>Touch</span></h1>
+        <h1>Book Device <span>Repair</span></h1>
 
-        <p>We're here to help with all your electronics repair needs</p>
+        <p>Schedule a pickup and our technician will repair your device.</p>
 
     </div>
 
 </section>
+
 
 <!-- CONTACT INFO CARDS -->
 
@@ -64,80 +68,109 @@
 
     <div class="contact-card">
         <div class="contact-icon"><i class="fa fa-envelope"></i></div>
-        <h3>Email Us</h3>
+        <h3>Email</h3>
         <p style="color:#ffb400;">contact@fixcart.com</p>
     </div>
 
     <div class="contact-card">
         <div class="contact-icon"><i class="fa fa-location-dot"></i></div>
-        <h3>Visit Us</h3>
-        <p>123 Repair Street</p>
-        <p>Tech City, TC 12345</p>
+        <h3>Service Area</h3>
+        <p>Ajmer City</p>
+        <p>Nearby Regions</p>
     </div>
 
     <div class="contact-card">
         <div class="contact-icon"><i class="fa fa-clock"></i></div>
         <h3>Working Hours</h3>
         <p>Mon - Sat</p>
-        <p>9:00 AM - 8:00 PM</p>
+        <p>9 AM - 8 PM</p>
     </div>
 
 </section>
 
-<!-- CONTACT FORM -->
+
+<!-- BOOK REPAIR SECTION -->
 
 <section class="contact-section">
 
+    <!-- LEFT SIDE FORM -->
+
     <div class="contact-form">
 
-        <h2>Send Us a <span>Message</span></h2>
+        <h2>Book a <span>Pickup</span></h2>
 
-        <p>Fill out the form below and we'll get back to you as soon as possible</p>
+        <p>Fill the form and our technician will contact you.</p>
 
-        <div class="input-group">
-            <label>Full Name *</label>
-            <input type="text" placeholder="Enter your name">
-        </div>
+        <form method="POST">
+            {% csrf_token %}
 
-        <div class="input-group">
-            <label>Email Address *</label>
-            <input type="email" placeholder="Enter your email">
-        </div>
+            <div class="input-group">
+                <label>Full Name *</label>
+                <input type="text" name="name" required>
+            </div>
 
-        <div class="input-group">
-            <label>Phone Number *</label>
-            <input type="text" placeholder="Enter your phone number">
-        </div>
+            <div class="input-group">
+                <label>Device Category *</label>
+                <select name="category" required>
+                    <option value="">Select Device</option>
+                    <option value="mobile">Mobile</option>
+                    <option value="laptop">Laptop</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
 
-        <div class="input-group">
-            <label>Service Required *</label>
-            <select>
-                <option>Select a service</option>
-                <option>Laptop Repair</option>
-                <option>Phone Repair</option>
-                <option>Home Electronics</option>
-            </select>
-        </div>
+            <div class="input-group">
+                <label>Describe Problem *</label>
+                <textarea name="problem_description" required></textarea>
+            </div>
 
-        <div class="input-group">
-            <label>Message *</label>
-            <textarea placeholder="Tell us about your repair needs"></textarea>
-        </div>
+            <div class="input-group">
+                <label>Pickup Address *</label>
+                <textarea name="pickup_address" required></textarea>
+            </div>
 
-        <button class="submit-btn">Send Message ✈</button>
+            <div class="input-group">
+                <label>Contact Number *</label>
+                <input type="text" name="contact_number" required>
+            </div>
+
+            <div class="input-group">
+                <label>Paste Google Map Location</label>
+                <input type="url" name="pickup_map_location" placeholder="https://maps.google.com/...">
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Book Pickup 🚚
+            </button>
+
+        </form>
 
     </div>
 
+
+    <!-- RIGHT SIDE VIDEO -->
+
     <div>
 
-        <h2 style="margin-bottom:10px;">Find <span style="color:#ffb400;">Us</span></h2>
-        <p style="color:#aaa;margin-bottom:20px;">Visit our service center or we can come to you</p>
+        <h2 style="margin-bottom:10px;">How <span style="color:#ffb400;">FixCart Works</span></h2>
+
+        <p style="color:#aaa;margin-bottom:20px;">
+            Watch how our repair pickup service works.
+        </p>
 
         <div class="map">
 
-            <iframe src="https://maps.google.com/maps?q=melbourne&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+            <iframe
+                    width="100%"
+                    height="350"
+                    src="https://www.youtube.com/embed/tgbNymZ7vqY"
+                    title="FixCart Service"
+                    frameborder="0"
+                    allowfullscreen>
+            </iframe>
 
         </div>
+
 
         <div class="hours">
 
@@ -164,6 +197,7 @@
 
 </section>
 
+
 <!-- FOOTER -->
 
 <footer>
@@ -173,18 +207,18 @@
         <div>
             <h3 style="color:#ff3b3b;">FixCart</h3>
             <p>Repair Made Easy</p>
-            <p>Your trusted partner for all electronics repair needs.</p>
+            <p>Your trusted partner for electronics repair.</p>
         </div>
 
         <div>
             <h3>Quick Links</h3>
             <p><a href="/" class="footer-link">Home</a></p>
-            <p><a href="/about/" class="footer-link">About Us</a></p>
+            <p><a href="/about/" class="footer-link">About</a></p>
             <p><a href="/contact/" class="footer-link">Contact</a></p>
         </div>
 
         <div>
-            <h3>Our Services</h3>
+            <h3>Services</h3>
             <p>Laptop Repair</p>
             <p>Phone Repair</p>
             <p>Home Electronics</p>
@@ -192,11 +226,10 @@
         </div>
 
         <div>
-            <h3>Contact Us</h3>
+            <h3>Contact</h3>
             <p><i class="fa-solid fa-phone"></i> 8955160103</p>
             <p><i class="fa-solid fa-phone"></i> 6377122637</p>
             <p><i class="fa-solid fa-envelope"></i> contact@fixcart.com</p>
-            <p>Mon - Sat: 9 AM - 8 PM</p>
         </div>
 
     </div>
@@ -206,6 +239,8 @@
     </div>
 
 </footer>
+
 <script src="{% static 'fixcart_app/js/hamburger_icon.js' %}"></script>
+
 </body>
 </html>
