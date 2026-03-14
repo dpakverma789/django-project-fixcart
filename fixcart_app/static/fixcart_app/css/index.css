@@ -32,6 +32,10 @@ nav {
     font-weight: 700;
 }
 
+.logo a{
+    text-decoration: none;
+}
+
 .logo span:first-child {
     color: #ff3b3b;
 }
