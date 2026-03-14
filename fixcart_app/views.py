@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import RepairRequest
+from .models import RepairRequest, RepairRequestImage
 
 def home(request):
     return render(request, 'fixcart_app/index.html')
@@ -7,10 +7,11 @@ def home(request):
 def about(request):
     return render(request, 'fixcart_app/about.html')
 
-
 def contact(request):
+
     if request.method == "POST":
-        RepairRequest.objects.create(
+
+        repair_request = RepairRequest.objects.create(
             name=request.POST.get("name"),
             category=request.POST.get("category"),
             problem_description=request.POST.get("problem_description"),
@@ -19,6 +20,13 @@ def contact(request):
             pickup_map_location=request.POST.get("pickup_map_location"),
         )
 
-        return redirect("contact")
+        images = request.FILES.getlist("device_images")
 
+        for img in images:
+            RepairRequestImage.objects.create(
+                repair_request=repair_request,
+                image=img
+            )
+
+        return redirect("contact")
     return render(request, "fixcart_app/contact.html")

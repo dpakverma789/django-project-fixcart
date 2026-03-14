@@ -95,57 +95,54 @@
 
     <!-- LEFT SIDE FORM -->
 
-    <div class="contact-form">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
 
-        <h2>Book a <span>Pickup</span></h2>
+        <div class="input-group">
+            <label>Full Name *</label>
+            <input type="text" name="name" required>
+        </div>
 
-        <p>Fill the form and our technician will contact you.</p>
+        <div class="input-group">
+            <label>Device Category *</label>
+            <select name="category" required>
+                <option value="">Select Device</option>
+                <option value="mobile">Mobile</option>
+                <option value="laptop">Laptop</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
 
-        <form method="POST">
-            {% csrf_token %}
+        <div class="input-group">
+            <label>Describe Problem *</label>
+            <textarea name="problem_description" required></textarea>
+        </div>
 
-            <div class="input-group">
-                <label>Full Name *</label>
-                <input type="text" name="name" required>
-            </div>
+        <div class="input-group">
+            <label>Pickup Address *</label>
+            <textarea name="pickup_address" required></textarea>
+        </div>
 
-            <div class="input-group">
-                <label>Device Category *</label>
-                <select name="category" required>
-                    <option value="">Select Device</option>
-                    <option value="mobile">Mobile</option>
-                    <option value="laptop">Laptop</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
+        <div class="input-group">
+            <label>Contact Number *</label>
+            <input type="text" name="contact_number" required>
+        </div>
 
-            <div class="input-group">
-                <label>Describe Problem *</label>
-                <textarea name="problem_description" required></textarea>
-            </div>
+        <div class="input-group">
+            <label>Google Map Location</label>
+            <input type="url" name="pickup_map_location">
+        </div>
 
-            <div class="input-group">
-                <label>Pickup Address *</label>
-                <textarea name="pickup_address" required></textarea>
-            </div>
+        <div class="input-group">
+            <label>Upload Device Images</label>
+            <input type="file" name="device_images" multiple>
+        </div>
 
-            <div class="input-group">
-                <label>Contact Number *</label>
-                <input type="text" name="contact_number" required>
-            </div>
+        <button type="submit" class="submit-btn">
+            Book Pickup 🚚
+        </button>
 
-            <div class="input-group">
-                <label>Paste Google Map Location</label>
-                <input type="url" name="pickup_map_location" placeholder="https://maps.google.com/...">
-            </div>
-
-            <button type="submit" class="submit-btn">
-                Book Pickup 🚚
-            </button>
-
-        </form>
-
-    </div>
+    </form>
 
 
     <!-- RIGHT SIDE VIDEO -->
