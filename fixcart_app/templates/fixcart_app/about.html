@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="{% static 'fixcart_app/css/about.css' %}">
 
+    <link rel="stylesheet" href="{% static 'fixcart_app/css/about.css' %}">
 </head>
 
 <body>
@@ -24,29 +24,29 @@
         <span>Fix</span><span>Cart</span>
     </div>
 
-    <ul>
+    <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <ul class="nav-links">
         <li><a href="/">Home</a></li>
-        <li><a class="active" href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a class="active" href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a class="call-btn" href="tel:8955160103">📞 Call Now</a></li>
     </ul>
 
-    <a class="call-btn">📞 Call Now</a>
-
 </nav>
+
 
 <!-- HERO -->
 
 <section class="hero">
-
     <div class="hero-content">
-
         <h1>About <span>FixCart</span></h1>
-
         <p>Your Trusted Partner for Electronics Repair</p>
-
     </div>
-
 </section>
+
 
 <!-- STORY -->
 
@@ -65,6 +65,7 @@
     </p>
 
 </section>
+
 
 <!-- WHY CHOOSE -->
 
@@ -116,6 +117,7 @@
 
 </section>
 
+
 <!-- TEAM -->
 
 <section class="team">
@@ -157,6 +159,7 @@
     </div>
 
 </section>
+
 
 <!-- SERVICE AREA -->
 
@@ -201,6 +204,7 @@
 
 </section>
 
+
 <!-- FOOTER -->
 
 <footer>
@@ -215,9 +219,9 @@
 
         <div>
             <h3>Quick Links</h3>
-            <p>Home</p>
-            <p>About Us</p>
-            <p>Contact</p>
+            <p><a href="/" class="footer-link">Home</a></p>
+            <p><a href="/about/" class="footer-link">About Us</a></p>
+            <p><a href="/contact/" class="footer-link">Contact</a></p>
         </div>
 
         <div>
@@ -239,12 +243,12 @@
     </div>
 
     <div class="footer-bottom">
-
         © 2026 FixCart. All rights reserved.
-
     </div>
 
 </footer>
+
+<script src="{% static 'fixcart_app/js/about.js' %}"></script>
 
 </body>
 </html>
