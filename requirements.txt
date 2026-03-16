@@ -5,3 +5,4 @@ psycopg2-binary==2.9.11
 pillow==12.1.1
 python-dotenv==1.2.2
 vercel==0.5.2
+django-cloudinary-storage==0.3.0
