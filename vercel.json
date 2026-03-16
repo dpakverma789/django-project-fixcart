@@ -4,15 +4,13 @@
     {
       "src": "django_project_fixcart/wsgi.py",
       "use": "@vercel/python",
-      "config": {
-        "runtime": "python3.12"
-      }
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.12" }
     },
     {
       "src": "build_files.sh",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "staticfiles"
+        "distDir": "staticfiles_build"
       }
     }
   ],
