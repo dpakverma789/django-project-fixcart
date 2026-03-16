@@ -1,11 +1,8 @@
 echo "======> INSTALLING REQUIREMENTS <======"
-pip install -r requirements.txt
-echo "======> REQUIREMENTS INSTALLED <======"
+pip install -r requirements.txt --break-system-packages
 
 echo "======> COLLECTING STATIC FILES <======"
-python3.12 manage.py collectstatic --noinput --clear
-echo "======> STATIC FILES COLLECTED <======"
+python3.12 manage.py collectstatic --noinput
 
-echo "======> MAKE-MIGRATIONS <======"
+echo "======> APPLYING MIGRATIONS <======"
 python3.12 manage.py migrate --noinput
-echo "======> MAKE-MIGRATIONS-END <======"
