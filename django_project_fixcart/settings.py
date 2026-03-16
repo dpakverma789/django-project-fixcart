@@ -137,7 +137,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_DIRS = [BASE_DIR / 'static']
+# Only include STATICFILES_DIRS if the directory exists
+static_dir = BASE_DIR / 'static'
+if static_dir.exists():
+    STATICFILES_DIRS = [static_dir]
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
