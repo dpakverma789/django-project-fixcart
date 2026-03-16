@@ -20,15 +20,9 @@ def order(request):
             contact_number=request.POST.get("contact_number"),
             pickup_map_location=request.POST.get("pickup_map_location"),
         )
-
         images = request.FILES.getlist("device_images")
-
         for img in images:
-            RepairRequestImage.objects.create(
-                repair_request=repair_request,
-                image=img
-            )
-
+            RepairRequestImage.objects.create(repair_request=repair_request,image=img)
         return redirect("thankyou")
     return render(request, 'fixcart_app/order.html')
 

@@ -21,14 +21,8 @@ class RepairRequest(models.Model):
 
 class RepairRequestImage(models.Model):
 
-    repair_request = models.ForeignKey(
-        RepairRequest,
-        related_name="images",
-        on_delete=models.CASCADE
-    )
-
+    repair_request = models.ForeignKey(RepairRequest,related_name="images",on_delete=models.CASCADE)
     image = models.ImageField(upload_to="repair_images/")
-
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
