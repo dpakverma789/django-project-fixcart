@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0b0b0b;
+    color: white;
+    padding-top: 80px;
+}
+
+/* NAVBAR */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: #111;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.logo span:first-child {
+    color: #ff3b3b;
+}
+
+.logo span:last-child {
+    color: #ffb400;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+nav a.active {
+    color: #ffb400;
+}
+
+.call-btn {
+    background: #ff3b3b;
+    padding: 10px 18px;
+    border-radius: 6px;
+    color: white;
+}
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 120px 20px 60px;
+}
+
+.hero span {
+    color: #ffb400;
+}
+
+/* CONTACT SECTION */
+
+.contact-section {
+    padding: 80px 8%;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 60px;
+}
+
+/* OWNER INFO */
+
+.owner {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.owner img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffb400;
+    margin-bottom: 10px;
+}
+
+.role {
+    color: #ffb400;
+    font-size: 14px;
+}
+
+/* INFO */
+
+.info-box {
+    margin-top: 20px;
+}
+
+.info-box p {
+    margin-bottom: 12px;
+    color: #aaa;
+}
+
+.info-box i {
+    color: #ffb400;
+    margin-right: 10px;
+}
+
+/* SOCIAL LINKS */
+
+.social-links {
+    margin-top: 25px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 22px;
+    margin-right: 15px;
+    transition: .3s;
+}
+
+.social-links a:hover {
+    color: #ffb400;
+}
+
+/* VIDEO */
+
+.video-section h2 {
+    margin-bottom: 20px;
+}
+
+.video-section span {
+    color: #ffb400;
+}
+
+.video-box {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #222;
+}
+
+.video-box iframe {
+    width: 100%;
+    height: 320px;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 80px;
+    padding: 40px;
+    text-align: center;
+    background: #111;
+    color: #777;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .contact-container {
+        grid-template-columns:1fr;
+    }
+
+    .hero {
+        padding: 100px 20px 40px;
+    }
+
+}
