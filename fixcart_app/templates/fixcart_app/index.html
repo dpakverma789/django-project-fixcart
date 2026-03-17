@@ -11,7 +11,7 @@
           rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <link rel="shortcut icon" type="image/jpeg" href="{% static 'fixcart_app/images/title_icon.jpg' %}" sizes="10x10">
     <link rel="stylesheet" href="{% static 'fixcart_app/css/index.css' %}">
 </head>
 
@@ -129,12 +129,11 @@
     <p>Don't just take our word for it - hear from our satisfied customers</p>
 
     <div class="testimonials">
-
         <div class="testimonial">
-            <div class="stars">★★★★★</div>
+            <div class="stars">★★★★</div>
             <p>"Excellent service! My laptop was fixed within 24 hours."</p>
             <div class="divider"></div>
-            <div class="client">Rajesh Kumar</div>
+            <div class="client"></div>
             <div class="service">Laptop Repair</div>
         </div>
 
@@ -142,15 +141,15 @@
             <div class="stars">★★★★★</div>
             <p>"Quick and reliable service. Highly recommended!"</p>
             <div class="divider"></div>
-            <div class="client">Priya Sharma</div>
+            <div class="client"></div>
             <div class="service">Phone Repair</div>
         </div>
 
         <div class="testimonial">
-            <div class="stars">★★★★★</div>
+            <div class="stars">★★★★</div>
             <p>"Fixed my TV at home. No need to transport it anywhere."</p>
             <div class="divider"></div>
-            <div class="client">Amit Patel</div>
+            <div class="client"></div>
             <div class="service">Home Electronics</div>
         </div>
 
@@ -167,7 +166,9 @@
 
         <p>Contact us today for fast, reliable, and affordable repair services</p>
 
-        <button>Get Started Now →</button>
+        <a href="order/" class="hero-btns" style="text-decoration: none">
+            <button class="btn-red">Book Repair Service →</button>
+        </a>
 
     </div>
 
